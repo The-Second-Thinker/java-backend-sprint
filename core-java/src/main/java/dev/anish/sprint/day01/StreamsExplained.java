@@ -86,7 +86,7 @@ public class StreamsExplained {
                 .limit(4)
                 .peek(e -> System.out.println("   [filter stage] " + e.name()))
                 .filter(e -> e.salary().signum() > 0)
-                .peek(e -> System.out.println("      [map stage]  " + e.name()))
+                .peek(e -> System.out.println("      [map   stage]  " + e.name()))
                 .map(Employee::name)
                 .toList();
 
